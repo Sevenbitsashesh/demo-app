@@ -1,2 +1,3 @@
-include ':expensemanager', ':crashlyticsapp', ':demosdk'
+include ':demosdk'
+//include ':expensemanager', ':demosdk'
 rootProject.name='My Application'
