@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewExpenseActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etExpensename"
+                style="@style/editTextStyle"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle"
+                android:hint="Expense Name"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="20dp">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/etAmount"
+                style="@style/editTextStyle"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle"
+                android:hint="Amount"
+                android:inputType="number"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etExpensename" android:layout_margin="20dp">
+
+            </EditText>
+
+            <Spinner
+                android:id="@+id/category_spinner"
+                style="@style/editTextStyle"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@+id/etAmount" android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/tvAddNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/category_spinner"
+                android:layout_margin="50dp"
+                android:text="Add note">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/btnAddExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="70dp"
+                android:text="Add Expense"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddNote">
+
+            </Button>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
