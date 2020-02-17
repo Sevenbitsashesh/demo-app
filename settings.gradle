@@ -1,3 +1,2 @@
-include ':demosdk'
-//include ':expensemanager', ':demosdk'
+include ':expensemanager', ':demosdk'
 rootProject.name='My Application'
